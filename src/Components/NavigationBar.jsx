@@ -9,15 +9,15 @@ export default function Navigationbar() {
     function logout() {
         // alert('logout');
         localStorage.removeItem('auth');
-        navigate('/auth/login');
+        navigate('/');
     }
 
     return (
         <>
             {/* <Navbar bg="light" expand="lg"> */}
-            {/* <Navbar.Brand href="#home">Vigenesia</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
+            {/* <Navbar.Brand>Vigenesia</Navbar.Brand> */}
+                    {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
+                    {/* <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                     <Nav.Link href="#home">Home</Nav.Link>
                     <Nav.Link href="#link">Link</Nav.Link>
@@ -31,9 +31,9 @@ export default function Navigationbar() {
                 */}
                     <Nav.Item className='d-flex align-items-center' style={{height:"100%"}}>
                         {/* <Nav.Link>Link</Nav.Link> */}
-                        {/* <Nav.Link className='font-wieght-bold text-white'>
+                        <Nav.Link className='font-bold text-white'>
                         Vigenesia
-                        </Nav.Link> */}
+                        </Nav.Link>
                             {/* Logout */}
                     </Nav.Item> 
                     <Nav.Item>

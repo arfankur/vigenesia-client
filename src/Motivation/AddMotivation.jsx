@@ -12,9 +12,7 @@ export default function AddMotivation() {
         axios.post('http://localhost:8000/api/motivation', 
         {
             motivation: motivation
-        },
-        {headers:authHeader()}
-        ).then((result) => { 
+        },{headers:authHeader()}).then((result) => { 
             navigate('/motivations');
             window.location.reload();
         }).catch((err) => {
@@ -28,7 +26,7 @@ export default function AddMotivation() {
                 // setIdUser(result.data.id);
             }).catch((err) => {
                 // console.log(err);
-                navigate('/login');
+                navigate('/');
                 // window.location.reload();
             });
     }
@@ -47,10 +45,10 @@ export default function AddMotivation() {
                         </center>
                         {/* <p for="exampleFormControlTextarea1" class="form-label">Motivation</p> */}
                         <div className='mb-3'>
-                            <textarea style={{width:'75vw'}} class="form-control" id="exampleFormControlTextarea1" value={motivation} onChange={handleChangeMotivation}>{motivation}</textarea>
+                            <textarea style={{width:'75vw'}} className="form-control" id="exampleFormControlTextarea1" value={motivation} onChange={handleChangeMotivation}>{motivation}</textarea>
                         </div>
                         <div className='d-grid gap-2'>
-                            <button onClick={() => submitMotivation} className='btn btn-primary btn-sm'>Post</button>
+                            <button onClick={submitMotivation} className='btn btn-primary btn-sm'>Post</button>
                         </div>
                     </div>
                 </div>

@@ -24,7 +24,7 @@ export default function Register() {
             //     localStorage.setItem("auth", JSON.stringify(result.data.token));
             // window.location.reload();
             // }
-            navigate("/auth/login");
+            navigate("/");
             // console.log(result.data.token);
             // localStorage.setItem('auth',JSON.stringify(result.data.token));
             // setToken(localStorage.getItem('auth'));
@@ -36,7 +36,7 @@ export default function Register() {
         <>
             <Container fluid>
                 {/* <div className="flex justify-content-center"> */}
-                <div className=" d-flex justify-content-around align-items-center" style={{height : "100vh"}}>
+                <div className=" d-flex justify-content-around align-items-center" style={{height : "95vh"}}>
                 <div>
 
                 <center>
@@ -68,7 +68,7 @@ export default function Register() {
                     <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
                 </div> */}
                 <div className="mb-3 d-grid gap-2">
-                    <Link to="/auth/login" className="btn btn-link" type="button">Login</Link>
+                    <Link to="/" className="btn btn-link" type="button">Login</Link>
                     {/* <button className="btn btn-primary" type="button">Button</button> */}
                 </div>
                 <div className="d-grid gap-2">

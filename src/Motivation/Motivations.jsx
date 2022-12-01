@@ -24,14 +24,14 @@ export default function Motivations() {
                 console.log(result.data.id);
             }).catch((err) => {
                 // console.log(err);
-                navigate('/auth/login');
+                navigate('/');
                 // window.location.reload();
             });
     }
 
     useEffect(() => {
         // return 
-        getAuth();
+        // getAuth();
         if (showMotivationBy === "by-auth") {
             getMotivationByAuth();
 
@@ -43,17 +43,10 @@ export default function Motivations() {
         // return () => {
             
         // } 
-        // return 
+        return getAuth();
 
     }, [showMotivationBy]);
 
-    // useEffect(() => {
-    //   first
-    
-    //   return () => {
-    //     second
-    //   }
-    // }, [third])
     
 
     function getMotivation() {
@@ -142,11 +135,11 @@ export default function Motivations() {
                                 motivations.map(function (x, i) {
                                     return (
                                         <>
-                                            {chechkX(x.user_id)}
+                                            {chechkX(x)}
                                             <tr key={x.id}>
                                                 <td>{x.id}</td>
                                                 <td>{x.motivation}</td>
-                                                <td>{x.user_id}</td>
+                                                <td>{x.name}</td>
                                                 <td>{x.created_at}</td>
                                                 <td>{x.updated_at}</td>
                                                 <td>

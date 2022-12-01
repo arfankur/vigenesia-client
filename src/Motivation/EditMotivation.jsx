@@ -23,7 +23,7 @@ export default function EditMotivation() {
                 // setIdUser(result.data.id);
             }).catch((err) => {
                 // console.log(err);
-                navigate('/login');
+                navigate('/');
                 // window.location.reload();
             });
     }
@@ -61,7 +61,7 @@ export default function EditMotivation() {
                             <textarea style={{ width: '75vw' }} className="form-control" id="exampleFormControlTextarea1" value={motivation} onChange={handleChangeMotivation}>{motivation}</textarea>
                         </div>
                         <div className='d-grid gap-2'>
-                            <button onClick={() => updateMotivation} className='btn btn-primary btn-sm'>Update</button>
+                            <button onClick={updateMotivation} className='btn btn-primary btn-sm'>Update</button>
                         </div>
                     </div>
                 </div>

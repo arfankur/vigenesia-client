@@ -26,7 +26,7 @@ export default function Home() {
                 // console.log(result.data.id);
             }).catch((err) => {
                 // console.log(err);
-                navigate('/auth/login');
+                // navigate('/auth/login');
                 // window.location.reload();
             });
     }
@@ -47,12 +47,12 @@ export default function Home() {
           
                 <Routes>
                 
-                    <Route path="/" element={<NotFound />} />
+                    {/* <Route path="/" element={<NotFound />} /> */}
+                    <Route path="/" element={<Login />} />
+                    <Route path="/auth/register" element={<Register />} />
                     <Route path="/motivations" element={<Motivations />} />
                     <Route path="/motivation/add" element={<AddMotivation/>} />
                     <Route path="/motivation/edit/:id" element={<EditMotivation/>} />
-                    <Route path="/auth/register" element={<Register />} />
-                    <Route path="/auth/login" element={<Login />} />
                     {/* <Route path="/auth/login" element={<Login />} /> */}
                     {/* <Route path="/auth/register" element={<Register />} /> */}
                     
